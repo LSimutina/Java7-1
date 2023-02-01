@@ -46,9 +46,8 @@ public class StatsServiceTest {
     @Test // 5. Количество месяцев, в которых продажи были ниже среднего (см. п.2)
     public void shouldCheckBelowAverageSales() {
         StatsService service = new StatsService();
-        long averageAmount = service.averageAmountSales(sales);
         long expectedAmount = 5;
-        long actualAmount = service.belowAverageSales(sales, averageAmount);
+        long actualAmount = service.belowAverageSales(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
@@ -56,9 +55,8 @@ public class StatsServiceTest {
     @Test // 6. Количество месяцев, в которых продажи были выше среднего (см. п.2)
     public void shouldCheckAboveAverageSales() {
         StatsService service = new StatsService();
-        long averageAmount = service.averageAmountSales(sales);
         long expectedAmount = 5;
-        long actualAmount = service.aboveAverageSales(sales, averageAmount);
+        long actualAmount = service.aboveAverageSales(sales);
 
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
